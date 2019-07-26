@@ -3,6 +3,19 @@
 
 A script to reproduce Invalid checksum for file in Pear Archive_Tar
 
+Generate a 24GB file and then compressed by tar 
+
+```
+$ tar --version
+tar (GNU tar) 1.29
+Copyright (C) 2015 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by John Gilmore and Jay Fenlason. 
+```
+
 # Issue related to reproduce
 
 The message generated for this script is: 
@@ -11,6 +24,12 @@ The message generated for this script is:
  Message from error_object: Invalid checksum for file
  "fghabcdijklmnopefghabcdijklmnopefghabcdijklmnopefghabcdijklmnopefghabcdijklmnopefghabcdijklmnopefghabcdijklmnopefghabcdijklmnopefgh/ijklmnopefghabcdijklmnopefghabcdijklmnopefghabcdijklmnopefghabcdijklmnopefghabcdijklmnopefghabcdijkl"
  \: 52908 calculated, 0 expected
+```
+
+Expected to happen all will be ok:
+
+```
+Hurray!!, the file was extracted {"thisAObject": 0}
 ```
 
 # Version used of php and tar script
